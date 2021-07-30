@@ -1,6 +1,6 @@
 package commontools
 
-import "imports/pyfuncs"
+import "github.com/kacpekwasny/pyfuncs"
 
 // InSlice f
 func InSlice(match string, slice []string) (int, bool) {
