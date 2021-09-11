@@ -1,11 +1,9 @@
-package cookies
+package commontools
 
 import (
 	"fmt"
 	"net/http"
 	"strings"
-
-	cmt "github.com/kacpekwasny/commontools"
 )
 
 var defaultLang = "en"
@@ -17,7 +15,7 @@ func GetLang(r *http.Request) string {
 		return defaultLang
 	}
 	lang := strings.Split(ck.String(), "=")[1]
-	if _, is := cmt.InSlice(lang, allowedLangs); is {
+	if _, is := InSlice(lang, allowedLangs); is {
 		return lang
 	}
 	return defaultLang
